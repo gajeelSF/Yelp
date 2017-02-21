@@ -16,19 +16,19 @@ class BusinessesViewController: UIViewController,UITableViewDataSource, UITableV
     
     var filterBusinesses: [Business]!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //filterBusinesses = businesses
         
         tabelView.delegate = self
         tabelView.dataSource = self
         searchBar.delegate = self
-        //filterBusinesses = businesses
+
+        navigationItem.titleView = searchBar
         
         tabelView.rowHeight = UITableViewAutomaticDimension
         tabelView.estimatedRowHeight = 120
-        
         
         
         
@@ -108,6 +108,9 @@ class BusinessesViewController: UIViewController,UITableViewDataSource, UITableV
         searchBar.resignFirstResponder()
         
     }
+
+    
+    
     /*
      // MARK: - Navigation
      
